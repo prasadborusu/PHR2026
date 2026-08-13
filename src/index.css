@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream-50 text-slate-800 font-sans antialiased selection:bg-prajna-red-light selection:text-prajna-red;
+  }
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FCFAF2;
+}
+::-webkit-scrollbar-thumb {
+  background: #E6DFCE;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #DC2626;
+}
+
+/* CSS micro-animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes line-reveal {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+.animate-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: line-reveal 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Print Stylesheet overrides for registration ticket */
+@media print {
+  /* Hide header, footer, return/print buttons, and decorative elements */
+  header, 
+  footer, 
+  nav, 
+  button, 
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  /* Reset document background to clean white and remove scrollbars */
+  body, 
+  html, 
+  #root, 
+  main {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  
+  /* Reset the ticket positioning boundaries */
+  .max-w-3xl {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  
+  /* Style the ticket card beautifully for printing */
+  .bg-cream-100 {
+    background-color: #ffffff !important;
+    border: 2px solid #1E3A8A !important; /* Premium dark blue border */
+    padding: 2.5rem !important;
+    margin: 1.5rem auto !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    width: 90% !important;
+  }
+
+  /* Force browsers to print backgrounds and borders exactly as defined */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Format ticket members lists cleanly */
+  li {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 0.75rem !important;
+  }
+}
