@@ -2,19 +2,7 @@
 
 > **PRAJNA 2026** is a premium, feature-rich, and real-time portal built to manage registrations, dynamic rules validation, and administrative workflows for the 36-hour national-level hackathon at **Mohan Babu University (MBU)**.
 
----
 
-## 📸 UI/UX Showcase
-
-### 📊 Admin Cohorts Dashboard
-Manage team registrations, review eligibility stats, approve/reject cohorts, and export files.
-![Admin Cohort Dashboard](./public/screenshots/dashboard_cohorts.png)
-
-### 🗄️ Realtime Supabase Database
-Integrate smoothly with Supabase Table Editors for teams, members, configs, and problem statements.
-![Supabase Integration](./public/screenshots/supabase_table.png)
-
----
 
 ## 🚀 Key Features
 
