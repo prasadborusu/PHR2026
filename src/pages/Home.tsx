@@ -63,9 +63,9 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       <section className="relative bg-cream-50 flex items-center pt-2 pb-2 sm:pt-4 sm:pb-4 overflow-hidden border-b border-prajna-blue/10">
         <div className="absolute inset-0 bg-[radial-gradient(#e2d9c2_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>
 
-        <div className="w-full grid grid-cols-1 min-[500px]:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10 px-4 sm:px-8 md:pl-16 md:pr-4">
+        <div className="w-full grid grid-cols-12 gap-4 lg:gap-8 items-center relative z-10 px-4 sm:px-8 md:pl-16 md:pr-4">
           {/* Hero Content */}
-          <div className="col-span-1 lg:col-span-4 space-y-4 sm:space-y-6 flex flex-col items-start text-left py-2 sm:py-6 lg:pl-12">
+          <div className="col-span-7 lg:col-span-4 space-y-4 sm:space-y-6 flex flex-col items-start text-left py-2 sm:py-6 lg:pl-12">
             <div className="space-y-1">
               <h1 className="text-4xl sm:text-6xl md:text-7xl font-sans font-extrabold text-prajna-blue tracking-tight leading-none animate-fade-in">
                 PRAJNA
@@ -142,7 +142,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           </div>
 
           {/* Hero Architectural Building Photo/Illustration (Fills right side completely) */}
-          <div className="col-span-1 lg:col-span-8 relative w-full h-[200px] min-[500px]:h-[300px] lg:h-[840px] xl:h-[900px] flex items-center justify-center lg:items-end lg:justify-end">
+          <div className="col-span-5 lg:col-span-8 relative w-full h-[200px] min-[500px]:h-[300px] lg:h-[840px] xl:h-[900px] flex items-center justify-center lg:items-end lg:justify-end">
             <img 
               src="/landing.png" 
               alt="Mohan Babu University Academic Building" 
